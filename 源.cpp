@@ -8,15 +8,23 @@ void test()
 	int* preorder = a;
 	int b[] = { 4, 7, 2, 1, 5, 3, 8, 6 };
 	int* inorder = b;
-	BinaryTreeNode* tree = Construct(preorder,inorder,8);
-	delete tree;
+	int c[] = { 7, 4, 2, 5, 8, 6, 3, 1 };
+	int* postorder = c;
+	BinaryTreeNode* tree = ConstructInPost(inorder, postorder, 8);
+	PreorderTraversal(tree);
+	cout << endl;
+	InorderTraversal(tree);
+	cout << endl;
+	PostorderTraversal(tree);
+	cout << endl;
+	cout << GetNext(tree)->value;
 }
 void main()
 {
 	LARGE_INTEGER li, freq;
 	QueryPerformanceCounter(&li);
 	double f_start = li.QuadPart;
-	
+
 	// 要被计时的操作
 	test();
 
