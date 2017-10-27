@@ -1,4 +1,5 @@
-using std::cout;
+#include <iostream>
+using namespace std;
 struct Node
 {
 	int value;
